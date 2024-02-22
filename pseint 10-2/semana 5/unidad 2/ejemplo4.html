@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="animation" width="200" style="border:1px solid">
+
+    </canvas>
+    <script>
+        var canva = document.getElementById("animation");
+        var ctx = canva.getContext("2d");
+       var posX=0;
+       var posY=0;
+
+
+    animar();
+
+
+
+
+
+        function dibujarcuadro(x, y) {
+            ctx.fillStyle = "#ff0000";
+            ctx.fillRect(0, 0, 30, 30);
+        }
+
+function animar(){
+    ctx.clearRect(0,0,canva.width, canva.height);
+    dibujarCuadro (posX, posY);
+    if(posX< canva.width) {
+         requestAnimationFrame(animar);
+    }
+       
+    
+      
+      posX ++;
+}
+
+
+    </script>
+<html>
+    <head><title>Mi Página Web</title></head>
+    <body>
+        <header style="width:800px; height:200px; background:#CCCCCC">
+            Aquí ira el logo
+        </header>
+        <nav style="width:200px; height:400px; float:left; background:#FFFF99">
+            Aquí ira el menú
+        </nav>
+        <section style="width:600px; height:400px; float:left; background:#7777FF">
+            Aquí ira el contenido
+        </section>
+    </body>
+</html>

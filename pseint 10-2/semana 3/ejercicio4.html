@@ -1,0 +1,31 @@
+<script>
+    var sexo = "";
+    sexo = prompt("ingrese el sexo del atleta (H o M)");
+    var edad = 0;
+    edad = parseInt(prompt("ingrese la edad del atleta"));
+    var t=0;
+    t = parseInt(prompt("ingrese el tiempo del atleta en el maratón (min)"));
+
+    if (sexo == "H") {
+        if (edad < 40) {
+            if (t <= 150) {
+                document.writeln("el atleta fue seleccionado");
+            } else {
+                document.writeln("el atleta NO fue seleccionado");
+            }
+
+        } else if (t <= 175) {
+            document.writeln("el atleta fue seleccionado");
+        } else {
+            document.writeln("el atleta NO fue seleccionado");
+        }
+    }
+    if (sexo == "M") {
+        if (t <= 180) {
+            document.writeln("el atleta fue seleccionado");
+        } else {
+            document.writeln("el atleta NO fue seleccionado");
+        }
+
+    }
+</script>
